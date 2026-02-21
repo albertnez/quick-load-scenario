@@ -7,8 +7,7 @@ func _set_scenarios(value: Array[String]) -> void:
 	_custom_scenarios = value
 	emit_changed()
 
+
+const _default : Array[String] = ["DEFAULT"]
 func get_list() -> Array[String]:
-	# Unnecessary temporary variables because we can't return as Array[String] directly.
-	var result : Array[String] = ["DEFAULT"]
-	result += _custom_scenarios.filter(func (s: String): return not s.is_empty())
-	return result
+	return _default + _custom_scenarios.filter(func (s: String): return not s.is_empty())

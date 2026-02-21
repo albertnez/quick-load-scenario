@@ -13,6 +13,7 @@ func _enter_tree():
 	var toolbar = dropdown_menu.get_parent()
 	toolbar.move_child(dropdown_menu, 4)
 
+
 func _exit_tree():
 	remove_autoload_singleton("QuickLoadScenario")
 	remove_control_from_container(CONTAINER_TOOLBAR, dropdown_menu)
